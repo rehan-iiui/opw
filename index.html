@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open World 3D</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenWorld3D</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div id="loadingScreen">
-    <div class="loading-title">OPEN WORLD 3D</div>
-    <div class="loading-bar">
-      <div id="loadingProgress"></div>
-    </div>
-    <div id="loadingText">Loading world...</div>
-  </div>
-
-  <div id="gameUI">
-    <div class="top-left">
-      <div class="game-title">OPEN WORLD</div>
-      <div class="status">● ONLINE</div>
-    </div>
-
-    <div class="controls-help">
-      <span>W A S D</span> Move
-      <span>SPACE</span> Jump
-      <span>MOUSE</span> Camera
-      <span>ESC</span> Release Mouse
-    </div>
-
-    <div id="crosshair">+</div>
-
-    <div class="bottom-left">
-      <div class="player-info">
-        <div class="health-label">HEALTH</div>
-        <div class="health-bar">
-          <div class="health-fill"></div>
+    <div id="loadingScreen">
+        <div class="loadingBox">
+            <h1>OpenWorld3D</h1>
+            <p>Loading world...</p>
+            <div class="loadingBar">
+                <div id="loadingProgress"></div>
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="bottom-right">
-      <div class="speed">SPEED <span id="speedValue">0</span></div>
+    <div id="startScreen">
+        <div class="startBox">
+            <h1>OpenWorld3D</h1>
+            <p>Explore the city</p>
+            <button id="startButton">START GAME</button>
+        </div>
     </div>
-  </div>
 
-  <div id="startScreen">
-    <div class="start-box">
-      <h1>OPEN WORLD 3D</h1>
-      <p>Third-Person Prototype</p>
-      <button id="startButton">START GAME</button>
-      <div class="start-info">
-        WASD to move<br>
-        SPACE to jump<br>
-        Move mouse to control camera
-      </div>
+    <div id="hud">
+        <div class="hudTop">
+            <div class="healthBox">
+                <span>HEALTH</span>
+                <div class="healthBar">
+                    <div id="healthFill"></div>
+                </div>
+            </div>
+
+            <div class="moneyBox">
+                $<span id="money">500</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <b>W A S D</b> Move &nbsp;
+            <b>SHIFT</b> Run &nbsp;
+            <b>SPACE</b> Jump
+        </div>
     </div>
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- PLAYER SYSTEM -->
+    <script src="player/player.js"></script>
+    <script src="player/movement.js"></script>
+    <script src="player/camera.js"></script>
+    <script src="player/animation.js"></script>
+
+    <!-- MAIN GAME -->
+    <script src="script.js"></script>
 
 </body>
 </html>
